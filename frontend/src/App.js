@@ -1,17 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import {Template1} from "./Templates/Template12/Template1";
-import {Template2} from "./Templates/Template2/Template2";
-import {Login} from "./Components/Login/Login";
+// import {Template1} from "./Templates/Template12/Template1";
+// import {Template2} from "./Templates/Template2/Template2";
+// import {Login} from "./Components/Login/Login";
 import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
-import {Header} from "./Components/Header/Header";
-import {Form} from "./Components/Form/Form";
-import {Intro} from "./Components/Intro/Intro";
-import TemplateCard from "./Components/TemplateCard/TemplateCard";
+// import {Header} from "./Components/Header/Header";
+// import {Form} from "./Components/Form/Form";
+// import {Intro} from "./Components/Intro/Intro";
+// import TemplateCard from "./Components/TemplateCard/TemplateCard";
 
-import { Template4 } from './Templates/Template4/Template4';
+// import { Template4 } from './Templates/Template4/Template4';
 
-
+import {Master} from './Templates/master';
 
 
 
@@ -31,7 +30,8 @@ function App() {
       <TemplateCard />
       <Login /> */}
       {/* <Template4 /> */}
-      <Template4/>
+      {/* <Template4/> */}
+      <Master/>
       {/* <Template1 /> */}
       {/* <Form/> */}
 

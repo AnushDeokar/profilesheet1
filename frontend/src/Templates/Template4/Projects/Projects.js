@@ -47,7 +47,7 @@ const useStyles = makeStyles({
 
 
 
-console.log(ProjectDetails);
+// console.log(ProjectDetails);
 
 export const Projects = () => {
     const classes = useStyles();
