@@ -20,7 +20,9 @@ const theme = createTheme({
     },
   });
 
-export const Template4 = () => {
+export const Template4 = (props) => {
+
+    
     return (
         <ThemeProvider theme={theme}>
             <Section1/>

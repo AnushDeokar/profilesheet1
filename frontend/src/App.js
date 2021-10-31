@@ -10,7 +10,7 @@ import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
 
 // import { Template4 } from './Templates/Template4/Template4';
 
-import {Master} from './Templates/master';
+import Master from './Templates/master';
 
 
 
