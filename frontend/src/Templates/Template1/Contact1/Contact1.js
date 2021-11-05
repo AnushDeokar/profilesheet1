@@ -25,8 +25,6 @@ const useStyles = makeStyles({
 
 });
 
-
-
 function Contact1(props) {
   const classes = useStyles();
   return (
