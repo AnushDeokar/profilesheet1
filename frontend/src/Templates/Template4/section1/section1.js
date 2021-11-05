@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     mainDiv: {
         width: "100vw",
         backgroundColor: '#e9d5a1',
-        height:'100vh'
+        height:'90vh'
     },
     subDiv:{
         justifyContent: "center",

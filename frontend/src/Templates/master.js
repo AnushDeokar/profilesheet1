@@ -65,7 +65,10 @@ class Master extends React.Component {
     render() {
         const  details  = this.state;
 
-        return <div><Template4 props={details}/></div>;
+        return <div>
+            {/* <Template4 props={details}/> */}
+            <Template1/>
+        </div>;
     }
 }
 export default Master;
