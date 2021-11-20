@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
-import Modal from '@mui/material/Modal';
+
 import { ModalComponent } from './ModalComponent';
 
 
@@ -53,7 +53,7 @@ export const Projects = () => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => {setOpen(false);}
+//   const handleClose = () => {setOpen(false);}
     return (
         <div className={classes.mainDiv}>
             <Typography variant="h3" align="center">Projects</Typography>
@@ -85,22 +85,10 @@ export const Projects = () => {
                                 </CardActionArea>
                             </Card>
 
-                            <Modal
-                              open={open}
-                              onClose={handleClose}
-                              aria-labelledby="modal-modal-title"
-                              aria-describedby="modal-modal-description"
-                            >
-                              <ModalComponent title={data.title} des={data.description}/>  
-                              
-                            </Modal>
-                        </Grid>
-                              
-                    
-
-
-                
-
+                            
+                        <ModalComponent  title={data.title} des={data.description}/>            
+                            
+                        </Grid>    
                     ))
                     }
                 </Grid>

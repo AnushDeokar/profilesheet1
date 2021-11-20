@@ -21,14 +21,13 @@ const theme = createTheme({
   });
 
 export const Template4 = (props) => {
-
-    console.log(props, "Hello");
+    console.log(props, "t4");
     return (
         <ThemeProvider theme={theme}>
-            <Section1 />
-            <About/>
-            <Projects/>
-            <Skills/>
+            <Section1 data={props.details}/>
+            <About data={props.details.pages}/>
+            <Projects props={props}/>
+            <Skills data={props.details}/>
         </ThemeProvider>
     )
 }

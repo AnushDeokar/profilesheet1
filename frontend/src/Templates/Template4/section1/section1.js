@@ -19,18 +19,20 @@ const useStyles = makeStyles({
 
 }); 
 
-export const Section1 = () => {
-    var titles =['', 1000, 'Frontend Web Developer', 500];
+export const Section1 = (props) => {
+    
     const classes = useStyles();
-
-
-
+    const details = props.data;
+    const name = details.pages[0].data.name;
+    const brief = details.pages[0].data.brief;
+    var titles =['', 1000, brief, 1000];
+    
     return (
+        
         <div className={classes.mainDiv}>
             <div className={classes.subDiv}>
                 <DesktopMacIcon className={classes.wrapIcon} sx={{ fontSize: 250}}  />
-
-                <Typography style={{ fontWeight: 800 }} variant="h3">Anush Deokar</Typography>
+                <Typography style={{ fontWeight: 800 }} variant="h3">{name}</Typography>
                 <div className="title-container">
                 <Typical className="title-styles" steps={titles} loop={50} />
                 </div>

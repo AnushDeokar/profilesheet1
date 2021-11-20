@@ -20,12 +20,14 @@ const useStyles = makeStyles({
     },
 
 });
-export const About = () =>{
+export const About = (props) =>{
     const classes = useStyles();
+    const details = props.data[0].data.about;
+
     return(
         <div className={classes.mainDiv}>
             <div className={classes.subDiv}>
-                <Typography variant="h4" marginTop="100px">
+                <Typography variant="h4" style={{marginTop:"100px"}}>
                     About Me
                 </Typography>
 
@@ -37,12 +39,12 @@ export const About = () =>{
                  </Grid>
 
                  <Grid item xs={12} md={6} lg={6}>
-                    <Typography variant="h3" marginLeft="0">
+                    <Typography variant="h3" style={{marginLeft:"0px"}}>
                     Hi :)</Typography><br/>
                     <Typography>
-👋 I'm Anush Deokar. Fictional person for preview purposes :) I'm working with newest front-end frameworks like Angular, React and Vue. 
-What you are seeing now is portfolio template from 2020. If you like this portfolio template, make sure to ⭐ the repository to make it more recognizable for other users. Thank you 
+                    {details}
                     </Typography>
+                    
                  </Grid>
                 </Grid>
 
