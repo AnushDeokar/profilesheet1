@@ -10,7 +10,10 @@ import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
 
 // import { Template4 } from './Templates/Template4/Template4';
 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Master from './Templates/master';
+import { CourseComponent } from './Templates/Template4/Courses/CourseComponent';
+// import  Courses  from './Templates/Template4/Courses/Courses';
 
 
 
@@ -24,18 +27,13 @@ const theme = createTheme({
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
-      {/* <Header />
-      <Intro />
-      <TemplateCard />
-      <Login /> */}
-      {/* <Template4 /> */}
-      {/* <Template4/> */}
-      <Master/>
-      {/* <Template1 /> */}
-      {/* <Form/> */}
-
-    </MuiThemeProvider>
+    
+        <MuiThemeProvider theme={theme}>
+          {/* <Master/> */}
+       
+          <CourseComponent/>
+        </MuiThemeProvider>
+  
   );
 }
 

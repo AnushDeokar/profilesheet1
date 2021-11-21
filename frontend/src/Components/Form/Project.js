@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Forms.css";
-import { Button, Grid, Paper, Typography } from "@material-ui/core";
-import { Achievement } from "./Achievement";
+import { Button, Grid,  } from "@material-ui/core";
+// import { Achievement } from "./Achievement";
 import "./Forms.css";
 import { makeStyles } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
@@ -117,15 +117,6 @@ export const Project = () => {
                     accept="image/*"
                 />
             </Button>
-
-
-
-
-
-
-
-
-
 
         </div>
     )

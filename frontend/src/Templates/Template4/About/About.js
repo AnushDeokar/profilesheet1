@@ -7,8 +7,8 @@ const useStyles = makeStyles({
     mainDiv: {
         width: "100vw",
         height:'auto',
-        paddingBottom:"70px",
-        paddingTop:"70px"
+        paddingBottom:"30px",
+        paddingTop:"0px"
     },
     subDiv:{
         justifyContent: "center",

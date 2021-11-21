@@ -37,7 +37,8 @@ export const Skills = (props) => {
         Skills
       </Typography>
       <Container style={{margin: "auto"}}>
-        <Grid container spacing={2}>
+        <Grid container  alignItems="center"
+  justifyContent="center"  spacing={2}>
           {skillsarray.map((data, index) => (
             <Grid key={index} item xs={6} md={6} lg={1}>
               <div
@@ -45,6 +46,7 @@ export const Skills = (props) => {
                   textAlign: "center",
                   backgroundColor: "rgba(248,245,244,.05)",
                   padding: "7px 17px",
+                  marginTop:"50px",
                   borderRadius: "7px",
                 }}
               >

@@ -6,6 +6,7 @@ import { blue} from "@material-ui/core/colors";
 import {Skills} from './Skills/Skills';
 import { About } from './About/About';
 import { Projects } from './Projects/Projects';
+import { Courses} from './Courses/Courses';
 
 
 const theme = createTheme({
@@ -28,6 +29,7 @@ export const Template4 = (props) => {
             <About data={props.details.pages}/>
             <Projects props={props}/>
             <Skills data={props.details}/>
+            <Courses/>
         </ThemeProvider>
     )
 }
