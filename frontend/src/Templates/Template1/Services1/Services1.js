@@ -25,7 +25,7 @@ const MyCard = () => {
       <div className={classes.pad}>
         <Card margin={5} padding={5} sx={{ minWidth: 275 }}>
           <CardContent>
-            <h1><i class="fas fa-archway"></i></h1>
+            <h1><i className="fas fa-archway"></i></h1>
             <h2>Web Developer</h2>
             <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem modi quod

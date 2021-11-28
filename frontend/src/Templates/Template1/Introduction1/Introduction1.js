@@ -18,8 +18,10 @@ const useStyles = makeStyles({
 
 });
 
-export const Introduction1 = () => {
+export const Introduction1 = (props) => {
   const classes = useStyles();
+  console.log(props.data, "ee");
+  const details = props.data.pages[0].description;
   return (
     <div id="introduction-1">
 
@@ -36,14 +38,7 @@ export const Introduction1 = () => {
       <Grid className={classes.pad} item xs={12} md={6} lg={6}>
         <h1>My Introduction</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut aliquam
-          odio maxime. Ea animi facere, vero molestiae perferendis dolores
-          architecto facilis qui cupiditate eum nostrum repudiandae quos
-          voluptatum natus? Necessitatibus dolore hic quisquam doloribus
-          mollitia saepe asperiores quas praesentium, vel animi est optio ad
-          ratione quis unde quibusdam iure atque soluta dignissimos porro
-          repellendus ut! Distinctio, vitae! Qui dolorem error quasi enim neque
-          blanditiis.
+          {details}
         </p>
         </Grid>
 

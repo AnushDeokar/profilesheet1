@@ -19,17 +19,21 @@ const useStyles = makeStyles({
 });
 
 
-export const About1 = () => {
-    
+export const About1 = (props) => {
+    console.log(props);
+    const details = props.data;
+    const name = details.pages[0].data.name;
+    const brief = details.pages[0].data.brief;
     const classes = useStyles();
+    
     return (
 
         <div id="about1">
             <Grid container >
                 <Grid className={classes.pad} item xs={12} md={6} lg={6}>
                     <div style={{magin: "auto"}}>
-                        <h1 style={{fontSize: "55px"}}>Hii I'm Anush</h1>
-                        <h2>Senior Full Stack Web Developer!</h2>
+                        <h1 style={{fontSize: "55px"}}>Hii I'm {name}</h1>
+                        <h2>{brief}!</h2>
                         <div>
                             {/* <button>Hire Me</button> */}
                             <Button style={{margin: "0px 5px 0px 5px"}} variant="outlined">Hire Me</Button>

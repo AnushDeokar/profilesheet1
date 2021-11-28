@@ -3,6 +3,7 @@ import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
 // import InstagramIcon from "@mui/icons-material/Instagram";
 import { TechStack } from "./TechStack";
 // import { Fa500Px } from "react-icons/fa";
+import { Footer } from "./Footer";
 
 const useStyles = makeStyles({
   mainDiv: {
@@ -10,7 +11,7 @@ const useStyles = makeStyles({
     backgroundColor: "#1f1f1f",
     height: "auto",
     paddingTop: "50px",
-    paddingBottom: "50px",
+    paddingBottom: "10px",
     textAlign: "center",
     alignContent:"center",
     fontFamily: "Montserrat",
@@ -30,7 +31,7 @@ const useStyles = makeStyles({
 export const Skills = (props) => {
   const classes = useStyles();
   const skillsarray = props.data.skills;
-  // console.log(skillsarray);
+  console.log(props.data);
   return (
     <div className={classes.mainDiv}>
       <Typography className={classes.heade} variant="h4" align="center" margin="10px">
@@ -63,6 +64,8 @@ export const Skills = (props) => {
             </Grid>
           ))}
         </Grid>
+
+        <Footer data={props.data.pages[0].data}/>
       </Container>
     </div>
   );

@@ -70,7 +70,7 @@ function Contact1(props) {
         <div className={classes.primar}>
             
               
-              <a href className={`text-${props.theme}-500 leading-relaxed`}>
+              <a  className={`text-${props.theme}-500 leading-relaxed`}>
                 example@email.com
               </a>
               

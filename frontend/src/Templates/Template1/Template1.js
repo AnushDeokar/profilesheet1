@@ -11,19 +11,21 @@ import {useEffect } from 'react';
 
 
 
-export const Template1 = () => {
+export const Template1 = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+
     return (
         <div>
-            <Header />
-            <About1 />
-            <Introduction1 />
-            <Services1 />
-            <Projects1 />
-            <Contact1 />
-            <Footer1 />
+            
+            <Header data={props.details}/>
+            <About1 data={props.details} />
+            <Introduction1 data={props.details} />
+            <Services1 data={props.details} />
+            <Projects1 data={props.details} />
+            <Contact1 data={props.details} />
+            <Footer1 data={props.details} />
             {/* <h1>This is the first sample template.</h1> */}
         </div>
     )

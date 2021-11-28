@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Typography, Grid, CardActionArea } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core';
 import Button from '@mui/material/Button';
@@ -37,11 +37,12 @@ const useStyles = makeStyles({
 });
 export const CourseComponent = () => {
     const classes  = useStyles();
+    const [state, setstate] = useState(0);
 return (
     <div className={classes.mainDiv}>
         <div className={classes.head1}>
             <Typography variant="h2" align="center">
-                Data Structures and Algorithms
+                {state==0?<>Data Structures and Algorithms</>:<>Software</>}
             </Typography>
             <Typography align="center" variant="h4">
                 CSL2010
@@ -74,6 +75,8 @@ return (
                 <Typography component="div">
                     {data.description}
                 </Typography> 
+
+                
                 </CardActionArea>
             </Card>
             

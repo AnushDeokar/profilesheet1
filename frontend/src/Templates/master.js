@@ -3,8 +3,9 @@ import axios from 'axios';
 import credentials from './credentials.json'
 import { Template4 } from './Template4/Template4';
 // import { Template1  } from './Template1/Template1';
-// import { Template1  } from './Template1/Template1';
+import { Template1  } from './Template1/Template1';
 import Template5 from './Template5/src/Template5'
+import { CourseComponent } from '../Templates/Template4/Courses/CourseComponent';
 
 class Master extends React.Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class Master extends React.Component {
             {
             isLoaded?
             <Template4 details={data}/>:<div></div>
-            
+
             }
 
             {/* {

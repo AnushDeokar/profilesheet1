@@ -8,11 +8,12 @@ import Box from '@mui/material/Box';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import {CourseList} from './CourseList';
 import Link from '@mui/material/Link';
+import { useHistory } from 'react-router';
 
 
 const useStyles = makeStyles({
     mainDiv: {
-        width: "100vw",
+        // width: "100vw",
         backgroundColor: '#e9d5a1',
         height: 'auto',
         padding:"50px",
@@ -21,7 +22,6 @@ const useStyles = makeStyles({
     subDiv: {
         justifyContent: "center",
         textAlign: "center",
-        // position: "relative",
         fontFamily: "Montserrat",
         fontSize: "20px",
     },
@@ -35,17 +35,9 @@ const useStyles = makeStyles({
         textAlign: "center",
         margin: "auto"
     },
-    ourcard:{
-      
-    height: '20vw',
-        '&:hover': {
-            boxShadow: "0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-         },
-    },
     root: {
         display:'flex',
         justifyContent: 'space-between',
-
       }  
 
 });
@@ -60,34 +52,36 @@ const bull = (
   );
   
 
-// console.log(ProjectDetails);
-
-export const Courses = () => {
+export const Courses = (props) => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
+//   const CourseList = props.data.courses;
+//   console.log(CourseList, "cl");
+  let history = useHistory();
 //   const handleClose = () => {setOpen(false);}
     return (
         <div className={classes.mainDiv}>
             <Typography variant="h3" align="center">Courses</Typography>
 
             <Container>
-                <Grid container spacing={3} style={{marginTop:"30px"}}>
+                <Grid container spacing={3} style={{marginTop:"30px"}} >
                 {CourseList.map((data) => (
-                    <Grid  key={data.id} item sm={12} xs={12} md={4} lg={4}>
+                    <Grid key={data.id}  item sm={12} xs={12} md={4} lg={4}>
                     
-                    <Card >
-                        <CardActionArea >
+                    <Card>
+                        <CardActionArea onClick = {()=>{
+                            history.push("/course", {state:data.id});
+                            }} style={{minHeight:"200px"}}>
                             <CardContent>
                                 
                                 <Typography variant="h5" component="div" align="center">
-                                {data.title}
+                                {data.name}
                                 </Typography>
                                 <br/>
                                 <Typography sx={{ mb: 1.5 }} align="center" >
                                 {data.code}
                                 </Typography>
-                            
                                 <br />
                                 
                             </CardContent>
@@ -99,7 +93,7 @@ export const Courses = () => {
                                 <Link href={data.meet} style={{ textDecoration: 'none' }}>
                                     Meet
                                 </Link>    
-                                </Button>
+                            </Button>
                                 
                             <Button size="small">
                                 <Link href={data.classroom} style={{ textDecoration: 'none' }}>

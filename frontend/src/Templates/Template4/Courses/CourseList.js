@@ -2,7 +2,7 @@
 export const CourseList  = [
     {
       id: 1,
-      title: 'Introduction to Compter Science',
+      name: 'Introduction to Compter Science',
       code:'CSL2010',
       meet:'https://meet.google.com/',
       classroom:'https://classroom.google.com/'
@@ -10,7 +10,7 @@ export const CourseList  = [
     },
     {
       id: 2,
-      title: 'Software Engineering',
+      name: 'Software Engineering',
       code:'CSL2020',
       meet:'https://meet.google.com/',
       classroom:'https://classroom.google.com/'
@@ -19,7 +19,7 @@ export const CourseList  = [
     },
     {
         id: 3,
-        title: 'Data Structures and Algorithms',
+        name: 'Data Structures and Algorithms',
         code:'CSL4010',
         meet:'https://meet.google.com/',
         classroom:'https://classroom.google.com/'
